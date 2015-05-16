@@ -5,7 +5,4 @@ while read url;
 	do curl -O "$url" ;
 done < "$1"
 
-$comment = "Update IANA $(date +"%m_%d_%Y")"
-echo $comment;
-
-git commit -a -m "Update IANA"
+git commit -a -m "Update IANA assignements ($(date +"%d %m %Y"))"
