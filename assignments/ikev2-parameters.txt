@@ -4,7 +4,7 @@
            2005-01-18
 
    Last Updated
-           2015-01-08
+           2015-06-08
 
    Available Formats
            [IMG]
@@ -363,7 +363,7 @@ IKEv2 Identification Payload ID Types
            [IMG]
            CSV
 
-    Value     ID Type                  Reference
+    Value     ID Type                   Reference
       0    Reserved       [RFC7296]
       1    ID_IPV4_ADDR   [RFC7296]
       2    ID_FQDN        [RFC7296]
@@ -375,7 +375,7 @@ IKEv2 Identification Payload ID Types
      10    ID_DER_ASN1_GN [RFC7296]
      11    ID_KEY_ID      [RFC7296]
      12    ID_FC_NAME     [RFC4595]
-     13    ID_NULL        [draft-ietf-ipsecme-ikev2-null-auth]
+     13    ID_NULL        [RFC-ietf-ipsecme-ikev2-null-auth-07]
    14-200  Unassigned
    201-255 Private use    [RFC7296]
 
@@ -432,7 +432,7 @@ IKEv2 Authentication Method
            [IMG]
            CSV
 
-    Value              Authentication Method                          Reference
+    Value              Authentication Method                           Reference
       0    Reserved                                      [RFC7296]
       1    RSA Digital Signature                         [RFC7296]
       2    Shared Key Message Integrity Code             [RFC7296]
@@ -442,7 +442,7 @@ IKEv2 Authentication Method
      10    ECDSA with SHA-384 on the P-384 curve         [RFC4754]
      11    ECDSA with SHA-512 on the P-521 curve         [RFC4754]
      12    Generic Secure Password Authentication Method [RFC6467]
-     13    NULL Authentication Method                    [draft-ietf-ipsecme-ikev2-null-auth]
+     13    NULL Authentication                           [RFC-ietf-ipsecme-ikev2-null-auth-07]
      14    Digital Signature                             [RFC7427]
    15-200  Unassigned
    201-255 Private use                                   [RFC7296]
@@ -715,8 +715,8 @@ IKEv2 Configuration Payload Attribute Types
        17      INTERNAL_IP6_LINK    NO           8 or more      [RFC5739]
        18      INTERNAL_IP6_PREFIX  YES          17 octets      [RFC5739]
        19      HOME_AGENT_ADDRESS   NO           16 or 20       [http://www.3gpp.org/ftp/Specs/html-info/24302.htm][John_Meredith]
-       20      P-CSCF_IP4_ADDRESS   YES          0 or 4 octets  [draft-gundavelli-ipsecme-3gpp-ims-options]
-       21      P-CSCF_IP6_ADDRESS   YES          0 or 16 octets [draft-gundavelli-ipsecme-3gpp-ims-options]
+       20      P_CSCF_IP4_ADDRESS   YES          0 or 4 octets  [draft-gundavelli-ipsecme-3gpp-ims-options]
+       21      P_CSCF_IP6_ADDRESS   YES          0 or 16 octets [draft-gundavelli-ipsecme-3gpp-ims-options]
        22      FTT_KAT              NO           2 octets       [TS 24.302 12.6.0]
     23-16383   Unassigned
    16384-32767 Private Use                                      [RFC7296]
