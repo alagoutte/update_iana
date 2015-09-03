@@ -4,7 +4,7 @@
            2005-08-15
 
    Last Updated
-           2015-08-28
+           2015-09-01
 
    Available Formats
            [IMG]
@@ -71,10 +71,10 @@ BGP Transitive Extended Community Types
       0x80    in the "Generic Transitive Experimental Use Extended Community Sub-Types"       [RFC7153]
               registry)
               Generic Transitive Experimental Use Extended Community Part 2 (Sub-Types are
-      0x81    defined in the "Generic Transitive Experimental Extended Community Part 2       [RFC-ietf-idr-flowspec-redirect-rt-bis-05] 2015-08-28
+      0x81    defined in the "Generic Transitive Experimental Use Extended Community Part 2   [RFC-ietf-idr-flowspec-redirect-rt-bis-05] 2015-08-28
               Sub-Types" Registry)
               Generic Transitive Experimental Use Extended Community Part 3 (Sub-Types are
-      0x82    defined in the "Generic Transitive Experimental Extended Community Part 3       [RFC-ietf-idr-flowspec-redirect-rt-bis-05] 2015-08-28
+      0x82    defined in the "Generic Transitive Experimental Use Extended Community Part 3   [RFC-ietf-idr-flowspec-redirect-rt-bis-05] 2015-08-28
               Sub-Types" Registry)
    0x83-0x8f  Reserved for Experimental Use                                                   [RFC7153]                                  2012-09-28
    0x90-0xbf  Unassigned

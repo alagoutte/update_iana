@@ -4,7 +4,7 @@
            2002-01
 
    Last Updated
-           2015-08-27
+           2015-09-01
 
    Available Formats
            [IMG]
@@ -2173,6 +2173,14 @@ Global Feature-Capability Indicator Registration Tree
                                         which the functional entity including the feature-capability indicator in
                                         the SIP message is aware of being requested to support the feature do
                                         support the PS to CS SRVCC for originating calls in pre-alerting phase.
+                                        This feature-capability indicator, when included in a Feature-Caps header
+   g.3gpp.cs2ps-drvcc-alerting          field as specified in IETF RFC 6809 in a SIP request or a SIP response to [3GPP TS 24.237
+                                        the SIP request, indicates support of CS to PS dual radio access transfer 12.9.0][Frederic_Firmin]
+                                        for calls in alerting phase.
+                                        This feature-capability indicator when included in a Feature-Caps header
+   g.3gpp.cs2ps-drvcc-orig-pre-alerting field as specified in IETF RFC 6809 in a SIP request or a SIP response to [3GPP TS 24.237
+                                        the SIP request indicates support of CS to PS dual radio access transfer  12.9.0][Frederic_Firmin]
+                                        for originating calls in pre-alerting phase.
 
 SIP Feature-Capability Indicator Registration Tree
 
@@ -2302,7 +2310,7 @@ UUI Encoding Parameters
           ID              Name                  Contact URI            Last Updated
    [Adam_Roach]      Adam Roach      mailto:adam&nostrum.com           2013-02-26
    [Cullen_Jennings] Cullen Jennings mailto:fluffy&cisco.com
-   [Frederic_Firmin] Frederic Firmin mailto:frederic.firmin&etsi.org   2015-08-14
+   [Frederic_Firmin] Frederic Firmin mailto:frederic.firmin&etsi.org   2015-09-01
    [Jon_Peterson]    Jon Peterson    mailto:jon.peterson&neustar.biz
    [Mary_Barnes]     Mary Barnes     mailto:mary.ietf.barnes&gmail.com 2013-06-18
 
