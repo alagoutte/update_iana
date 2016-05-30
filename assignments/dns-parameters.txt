@@ -1,7 +1,7 @@
                                                          Domain Name System (DNS) Parameters
 
    Last Updated
-           2016-05-11
+           2016-05-23
 
    Available Formats
            [IMG]
@@ -309,7 +309,7 @@ DNS RCODEs
        20     BADNAME                                        Duplicate key name                [RFC2930]
        21     BADALG                                         Algorithm not supported           [RFC2930]
        22     BADTRUNC                                       Bad Truncation                    [RFC4635]
-       23     BADCOOKIE                                      Bad/missing server cookie         [RFC-ietf-dnsop-cookies-10]
+       23     BADCOOKIE                                      Bad/missing Server Cookie         [RFC-ietf-dnsop-cookies-10]
     24-3840   Unassigned
    3841-4095  Reserved for Private Use                                                         [RFC6895]
    4096-65534 Unassigned
@@ -432,7 +432,7 @@ DNS EDNS0 Option Codes (OPT)
         5      DAU                                 Standard [RFC6975]
         6      DHU                                 Standard [RFC6975]
         7      N3U                                 Standard [RFC6975]
-        8      edns-client-subnet                  Optional [RFC-ietf-dnsop-edns-client-subnet-08]
+        8      edns-client-subnet                  Optional [RFC7871]
         9      EDNS EXPIRE                         Optional [RFC7314]
        10      COOKIE                              Standard [RFC-ietf-dnsop-cookies-10]
        11      edns-tcp-keepalive                  Standard [RFC7828]
