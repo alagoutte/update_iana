@@ -4,7 +4,7 @@
            2002-01
 
    Last Updated
-           2017-02-10
+           2017-02-28
 
    Available Formats
            [IMG]
@@ -830,7 +830,7 @@ Header Field Parameters and Parameter Values
    Via                           oc-seq                      Yes               [RFC7339]
    Via                           oc-validity                 Yes               [RFC7339]
    Via                           received                    No                [RFC3261][RFC7118]
-   Via                           received-realm              No                [RFC-holmberg-dispatch-received-realm-12]
+   Via                           received-realm              No                [RFC8055]
    Via                           rport                       No                [RFC3581]
    Via                           sigcomp-id                  No                [RFC5049]
    Via                           ttl                         No                [RFC3261]
@@ -2057,6 +2057,8 @@ Info Packages Registry
    g.3gpp.mid-call               [3GPP TS 24.237 v10.19.0][Frederic_Firmin]
    g.3gpp.ussd                   [3GPP TS 24.390 v11.5.0][Frederic_Firmin]
    g.3gpp.state-and-event        [3GPP 24.237 Rel-10][Frederic_Firmin]
+   EmergencyCallData.eCall.MSD   [RFC-ietf-ecrit-ecall-27]
+   EmergencyCallData.eCall.VEDS  [RFC-ietf-ecrit-car-crash-23]
 
 SIP Configuration Profile Types
 
