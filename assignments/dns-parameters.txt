@@ -1,7 +1,7 @@
                                                          Domain Name System (DNS) Parameters
 
    Last Updated
-           2017-04-13
+           2017-06-07
 
    Available Formats
            [IMG]
@@ -65,6 +65,10 @@ DNS CLASSes
 
 Resource Record (RR) TYPEs
 
+   Expert(s)
+
+ Roy Arends, Frederico AC Neves, Olafur Gudmundsson, Ray Bellis
+
    Reference
            [RFC6895][RFC1035]
 
@@ -75,10 +79,10 @@ Resource Record (RR) TYPEs
      Decimal        Hex                                           Registration Procedures                                              Note
         0      0x0000        RRTYPE zero is used as a special indicator for the SIG RR [RFC2931], [RFC4034] and in other
                              circumstances and must never be allocated for ordinary use.
-      1-127    0x0000-0x007F DNS RRTYPE Allocation Policy                                                                       data TYPEs
-     128-255   0x0080-0x00FF DNS RRTYPE Allocation Policy                                                                       Q TYPEs, Meta TYPEs
-    256-61439  0x0100-0xEFFF DNS RRTYPE Allocation Policy                                                                       data RRTYPEs
-   61440-65279 0xF000-0xFEFF IETF Review
+      1-127    0x0000-0x007F Expert Review (see mailing list information in [RFC6895]) or Standards Action                      data TYPEs
+     128-255   0x0080-0x00FF Expert Review (see mailing list information in [RFC6895]) or Standards Action                      Q TYPEs, Meta TYPEs
+    256-61439  0x0100-0xEFFF Expert Review (see mailing list information in [RFC6895]) or Standards Action                      data RRTYPEs
+   61440-65279 0xF000-0xFEFF Reserved for future use (IETF Review required to define use)
    65280-65534 0xFF00-0xFFFE Reserved for Private Use
       65535    0xFFFF        Reserved (Standards Action)
 
@@ -185,7 +189,7 @@ DHCID          49      DHCID           [RFC4701]
 NSEC3          50      NSEC3           [RFC5155]
 NSEC3PARAM     51      NSEC3PARAM      [RFC5155]
 TLSA           52      TLSA            [RFC6698]
-SMIMEA         53      S/MIME cert     [RFC-ietf-dane-smime-16]                                                    SMIMEA/smimea-completed-template         2015-12-01
+SMIMEA         53      S/MIME cert     [RFC8162]                                                                   SMIMEA/smimea-completed-template         2015-12-01
                        association
 Unassigned     54
 HIP            55      Host Identity   [RFC8005]
