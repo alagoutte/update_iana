@@ -4,7 +4,7 @@
            2005-12-12
 
    Last Updated
-           2017-02-03
+           2017-07-19
 
    Available Formats
            [IMG]
@@ -34,6 +34,10 @@
      * VCCV Extended CV Types
      * ICC RG Parameter Types
      * PSN Tunnel Sub-TLV Name Space
+     * PW Status Refresh Reduction Control Messages
+     * PW Status Refresh Reduction Configuration Message Sub-TLVs
+     * PW Status Refresh Reduction Notification Codes
+     * PW Status Refresh Reduction Message Flags
 
 MPLS Pseudowire Types Registry
 
@@ -50,9 +54,9 @@ MPLS Pseudowire Types Registry
 
      Range    Registration Procedures                    Note
     31-1024   Expert Review
-   1025-4096  IETF Consensus
+   1025-4096  IETF Review
    4097-32766 First Come First Served reserved for vendor proprietary extensions
-     32767    IETF Consensus
+     32767    IETF Review
 
    PW Type                  Description                                                          Reference
    0x0001  Frame Relay DLCI ( Martini Mode )             [RFC4619]
@@ -105,9 +109,9 @@ Pseudowire Interface Parameters Sub-TLV type Registry
 
     Range  Registration Procedures                    Note
     2-64   Expert Review
-   65-127  IETF Consensus
+   65-127  IETF Review
    128-254 First Come First Served reserved for vendor proprietary extensions
-     255   IETF Consensus
+     255   IETF Review
 
    Parameter ID Length                        Description                         Reference
    0x01      4         Interface MTU in octets                                    [RFC8077]
@@ -155,9 +159,9 @@ Attachment Individual Identifier Type Registry
 
     Range  Registration Procedures                    Note
     2-64   Expert Review
-   65-127  IETF Consensus
+   65-127  IETF Review
    128-254 First Come First Served reserved for vendor proprietary extensions
-     255   IETF Consensus
+     255   IETF Review
 
    AII Type      Length                 Description                                                  Reference
    0x01     4                A 32 bit unsigned number local     [RFC6074]
@@ -187,9 +191,9 @@ Attachment Group Identifier (AGI) Type Registry
 
     Range  Registration Procedures                    Note
     2-64   Expert Review
-   65-127  IETF Consensus
+   65-127  IETF Review
    128-254 First Come First Served reserved for vendor proprietary extensions
-     255   IETF Consensus
+     255   IETF Review
 
    AGI Type Length    Description     Reference
    0x01     8      Extended Community [RFC6074]
@@ -278,7 +282,7 @@ MPLS VCCV Control Channel (CC) Types
 
    Registration Procedure(s)
 
- IETF Consensus
+ IETF Review
 
    Reference
            [RFC5085]
@@ -288,6 +292,7 @@ MPLS VCCV Control Channel (CC) Types
  Bit numbering: In this sub-registry, the most significant (high order) bit
  is labeled Bit 7, and the least significant (low order) bit is labeled Bit 0,
  see parenthetical "Value".
+
 
    Available Formats
            [IMG]
@@ -307,7 +312,7 @@ MPLS VCCV Connectivity Verification (CV) Types
 
    Registration Procedure(s)
 
- IETF Consensus
+ IETF Review
 
    Reference
            [RFC5085]
@@ -317,6 +322,7 @@ MPLS VCCV Connectivity Verification (CV) Types
  Bit numbering: In this sub-registry, the most significant (high order) bit
  is labeled Bit 7, and the least significant (low order) bit is labeled Bit 0,
  see parenthetical "Value".
+
 
    Available Formats
            [IMG]
@@ -507,7 +513,7 @@ ICC RG Parameter Types
    0x0017        PW-RED Synchronization Request TLV [RFC7275]
    0x0018        PW-RED Synchronization Data TLV    [RFC7275]
    0x0019        PW-RED Disconnect Cause TLV        [RFC7275]
-   0x001A-0x002F Resrved                            [RFC7275]
+   0x001A-0x002F Reserved                           [RFC7275]
    0x0030        mLACP Connect TLV                  [RFC7275]
    0x0031        mLACP Disconnect TLV               [RFC7275]
    0x0032        mLACP System Config TLV            [RFC7275]
@@ -558,6 +564,108 @@ PSN Tunnel Sub-TLV Name Space
    2     IPv6 PSN Tunnel sub-TLV [RFC7965]
    3-254 Unassigned
    255   Reserved                [RFC7965]
+
+PW Status Refresh Reduction Control Messages
+
+   Expert(s)
+
+ Unassigned
+
+   Reference
+           [RFC-ietf-pals-status-reduction-05]
+
+   Available Formats
+           [IMG]
+           CSV
+
+     Range   Registration Procedures
+     0x00    IETF Review
+   0x01-0x40 Expert Review
+   0x41-0x7F IETF Review
+   0x80-0xFE Expert Review
+     0xFF    IETF Review
+
+     Type      Message Description                 Reference
+   0x00      Unassigned
+   0x01      Notification message     [RFC-ietf-pals-status-reduction-05]
+   0x02      PW Configuration Message [RFC-ietf-pals-status-reduction-05]
+   0x03-0xFF Unassigned
+
+PW Status Refresh Reduction Configuration Message Sub-TLVs
+
+   Expert(s)
+
+ Unassigned
+
+   Reference
+           [RFC-ietf-pals-status-reduction-05]
+
+   Available Formats
+           [IMG]
+           CSV
+
+     Range   Registration Procedures
+     0x00    IETF Review
+   0x01-0x40 Expert Review
+   0x41-0x7F IETF Review
+   0x80-0xFE Expert Review
+     0xFF    IETF Review
+
+   sub-TLV Type       Description                     Reference
+   0x00         Unassigned
+   0x01         MPLS-TP Tunnel ID.       [RFC-ietf-pals-status-reduction-05]
+   0x02         PW ID configured List.   [RFC-ietf-pals-status-reduction-05]
+   0x03         PW ID unconfigured List. [RFC-ietf-pals-status-reduction-05]
+   0x04-0xFF    Unassigned
+
+PW Status Refresh Reduction Notification Codes
+
+   Expert(s)
+
+ Unassigned
+
+   Reference
+           [RFC-ietf-pals-status-reduction-05]
+
+   Available Formats
+           [IMG]
+           CSV
+
+           Range         Registration Procedures
+        0x00000000       IETF Review
+   0x00000001-0x00010000 Expert Review
+   0x00010001-0x80000000 IETF Review
+   0x80000001-0xFFFFFFFE Expert Review
+        0xFFFFFFFF       IETF Review
+
+           Code          Error?           Description                        Reference
+   0x00000000            No     Null Notification.              [RFC-ietf-pals-status-reduction-05]
+   0x00000001            No     PW configuration mismatch.      [RFC-ietf-pals-status-reduction-05]
+   0x00000002            Yes    PW Configuration TLV conflict.  [RFC-ietf-pals-status-reduction-05]
+   0x00000003            No     Unknown TLV (U-bit=1)           [RFC-ietf-pals-status-reduction-05]
+   0x00000004            Yes    Unknown TLV (U-bit=0)           [RFC-ietf-pals-status-reduction-05]
+   0x00000005            No     Unknown Message Type            [RFC-ietf-pals-status-reduction-05]
+   0x00000006            No     PW configuration not supported. [RFC-ietf-pals-status-reduction-05]
+   0x00000007            Yes    Unacknowledged control message. [RFC-ietf-pals-status-reduction-05]
+   0x00000008-0xFFFFFFFF        Unassigned
+
+PW Status Refresh Reduction Message Flags
+
+   Registration Procedure(s)
+
+ IETF Review
+
+   Reference
+           [RFC-ietf-pals-status-reduction-05]
+
+   Available Formats
+           [IMG]
+           CSV
+
+   Bit Position          Name                       Description             Reference
+   0            Unknown flag bit.       [RFC-ietf-pals-status-reduction-05]
+   1            Configuration flag bit. [RFC-ietf-pals-status-reduction-05]
+   2-7          Unassigned
 
                                                                         People
 
