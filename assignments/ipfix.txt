@@ -4,7 +4,7 @@
            2007-05-10
 
    Last Updated
-           2017-07-11
+           2017-08-10
 
    Note
 
@@ -713,10 +713,11 @@ ElementID                 Name                   Abstract Data Type   Data Type 
                                                                                              Observation Point.
                                                                                              This set of bit fields is used for marking the Information Elements of a Data
                                                                                              Record that serve as Flow Key. Each bit represents an Information Element in the
-                                                                                             Data Record with the n-th bit representing the n-th Information Element. A bit set
-                                                                                             to value 1 indicates that the corresponding Information Element is a Flow Key of
-                                                                                             the reported Flow. A bit set to value 0 indicates that this is not the case.
-   173    flowKeyIndicator                      unsigned64           flags        current                                                                                                                                                                     [RFC5102]                              0        2013-02-18
+                                                                                             Data Record, with the n-th least significant bit representing the n-th Information
+                                                                                             Element. A bit set to value 1 indicates that the corresponding Information Element
+                                                                                             is a Flow Key of the reported Flow. A bit set to value 0 indicates that this is not
+                                                                                             the case.
+   173    flowKeyIndicator                      unsigned64           flags        current                                                                                                                                                                     [RFC5102][RFC Errata 4984]             1        2017-08-01
                                                                                              If the Data Record contains more than 64 Information Elements, the corresponding
                                                                                              Template SHOULD be designed such that all Flow Keys are among the first 64
                                                                                              Information Elements, because the flowKeyIndicator only contains 64 bits. If the
@@ -2494,7 +2495,7 @@ ElementID                 Name                   Abstract Data Type   Data Type 
                                                                                              This Information Element contains the maximum number of IP source transport ports
                                                                                              that can be used by an end user when sending IP packets; each user is associated
                                                                                              with one or more (source) IPv4 or IPv6 addresses. This Information Element is
-   458    sourceTransportPortsLimit             unsigned16           totalCounter current    particularly useful in address-sharing deployments that adhere to REQ-4 of          ports        1-65535                                                         [RFC8045]                              0        2016-11-10
+   458    sourceTransportPortsLimit             unsigned16           quantity     current    particularly useful in address-sharing deployments that adhere to REQ-4 of          ports        1-65535                                                         [RFC8045][RFC Errata 5009]             1        2017-08-01
                                                                                              [RFC6888]. Limiting the number of ports assigned to each user ensures fairness
                                                                                              among users and mitigates the denial-of-service attack that a user could launch
                                                                                              against other users through the address-sharing device in order to grab more ports.
@@ -2806,30 +2807,30 @@ IPFIX Information Element Data Types
            [IMG]
            CSV
 
-   Value      Description      Reference
-     0    octetArray           [RFC5102]
-     1    unsigned8            [RFC5102]
-     2    unsigned16           [RFC5102]
-     3    unsigned32           [RFC5102]
-     4    unsigned64           [RFC5102]
-     5    signed8              [RFC5102]
-     6    signed16             [RFC5102]
-     7    signed32             [RFC5102]
-     8    signed64             [RFC5102]
-     9    float32              [RFC5102]
-     10   float64              [RFC5102]
-     11   boolean              [RFC5102]
-     12   macAddress           [RFC5102]
-     13   string               [RFC5102]
-     14   dateTimeSeconds      [RFC5102]
-     15   dateTimeMilliseconds [RFC5102]
-     16   dateTimeMicroseconds [RFC5102]
-     17   dateTimeNanoseconds  [RFC5102]
-     18   ipv4Address          [RFC5102]
-     19   ipv6Address          [RFC5102]
-     20   basicList            [RFC6313]
-     21   subTemplateList      [RFC6313]
-     22   subTemplateMultiList [RFC6313]
+   Value      Description          Reference
+     0    octetArray           [RFC5102][RFC7011]
+     1    unsigned8            [RFC5102][RFC7011]
+     2    unsigned16           [RFC5102][RFC7011]
+     3    unsigned32           [RFC5102][RFC7011]
+     4    unsigned64           [RFC5102][RFC7011]
+     5    signed8              [RFC5102][RFC7011]
+     6    signed16             [RFC5102][RFC7011]
+     7    signed32             [RFC5102][RFC7011]
+     8    signed64             [RFC5102][RFC7011]
+     9    float32              [RFC5102][RFC7011]
+     10   float64              [RFC5102][RFC7011]
+     11   boolean              [RFC5102][RFC7011]
+     12   macAddress           [RFC5102][RFC7011]
+     13   string               [RFC5102][RFC7011]
+     14   dateTimeSeconds      [RFC5102][RFC7011]
+     15   dateTimeMilliseconds [RFC5102][RFC7011]
+     16   dateTimeMicroseconds [RFC5102][RFC7011]
+     17   dateTimeNanoseconds  [RFC5102][RFC7011]
+     18   ipv4Address          [RFC5102][RFC7011]
+     19   ipv6Address          [RFC5102][RFC7011]
+     20   basicList            [RFC6313][RFC7011]
+     21   subTemplateList      [RFC6313][RFC7011]
+     22   subTemplateMultiList [RFC6313][RFC7011]
    23-255 Unassigned
 
 IPFIX Information Element Semantics
