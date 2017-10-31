@@ -1,7 +1,7 @@
                                                     Internet Protocol Version 6 (IPv6) Parameters
 
    Last Updated
-           2017-07-21
+           2017-10-13
 
    Available Formats
            [IMG]
@@ -11,17 +11,17 @@
 
    Registries included below
 
-     * Next Header Types
-     * IPv6 Extension Header Types
-     * Destination Options and Hop-by-Hop Options
-     * Routing Types
-     * RPL-option-TLV
-     * TaggerId Types
+     * Next Header Types
+     * IPv6 Extension Header Types
+     * Destination Options and Hop-by-Hop Options
+     * Routing Types
+     * RPL-option-TLV
+     * TaggerId Types
 
 Next Header Types
 
    Reference
-           [RFC-ietf-6man-rfc2460bis-13][RFC2780][RFC7045]
+           [RFC8200][RFC2780][RFC7045]
 
    Note
 
@@ -51,13 +51,13 @@ IPv6 Extension Header Types
            [IMG]
            CSV
 
-   Protocol Number             Description                           Reference
-          0        IPv6 Hop-by-Hop Option              [RFC-ietf-6man-rfc2460bis-13]
-         43        Routing Header for IPv6             [RFC-ietf-6man-rfc2460bis-13][RFC5095]
-         44        Fragment Header for IPv6            [RFC-ietf-6man-rfc2460bis-13]
+   Protocol Number             Description                 Reference
+          0        IPv6 Hop-by-Hop Option              [RFC8200]
+         43        Routing Header for IPv6             [RFC8200][RFC5095]
+         44        Fragment Header for IPv6            [RFC8200]
          50        Encapsulating Security Payload      [RFC4303]
          51        Authentication Header               [RFC4302]
-         60        Destination Options for IPv6        [RFC-ietf-6man-rfc2460bis-13]
+         60        Destination Options for IPv6        [RFC8200]
          135       Mobility Header                     [RFC6275]
          139       Host Identity Protocol              [RFC7401]
          140       Shim6 Protocol                      [RFC5533]
@@ -71,13 +71,13 @@ Destination Options and Hop-by-Hop Options
  IESG Approval, IETF Review or Standards Action
 
    Reference
-           [RFC-ietf-6man-rfc2460bis-13][RFC2780]
+           [RFC8200][RFC2780]
 
    Note
 
- From [RFC-ietf-6man-rfc2460bis-13] IPv6 Option Types are 8-bit values,
+ From [RFC8200] IPv6 Option Types are 8-bit values,
  structured as three subfields, are defined in Section 4.2 of
- [RFC-ietf-6man-rfc2460bis-13].
+ [RFC8200].
 
  Each distinct 8-bit Option Type identifies a different option, i.e., the
  high-order 3 bits are considered part of the option identification.
@@ -90,7 +90,7 @@ Destination Options and Hop-by-Hop Options
            [IMG]
            CSV
 
-   Hex Value    Binary Value                   Description                            Reference
+   Hex Value    Binary Value                   Description                        Reference
              act chg    rest
      0x00    00   0     00000    Pad1                                     [[IPV6]]
      0x01    00   0     00001    PadN                                     [[IPV6]]
@@ -108,7 +108,7 @@ Destination Options and Hop-by-Hop Options
      0x4D    01   0     01101    Deprecated                               [RFC7731]
      0x6D    01   1     01101    MPL Option                               [RFC7731]
      0xEE    11   1     01110    IP_DFF                                   [RFC6971]
-     0x0F    00   0     01111    Performance and Diagnostic Metrics (PDM) [RFC-ietf-ippm-6man-pdm-option-13]
+     0x0F    00   0     01111    Performance and Diagnostic Metrics (PDM) [RFC8250]
                      10000-11101 Unassigned
      0x1E    00   0     11110    RFC3692-style Experiment [1]             [RFC4727]
      0x3E    00   1     11110    RFC3692-style Experiment [1]             [RFC4727]
@@ -127,7 +127,7 @@ Routing Types
  IETF Review or IESG Approval
 
    Reference
-           [RFC-ietf-6man-rfc2460bis-13][RFC5871]
+           [RFC8200][RFC5871]
 
    Note
 

@@ -4,7 +4,7 @@
            2002-01
 
    Last Updated
-           2017-09-06
+           2017-10-26
 
    Available Formats
            [IMG]
@@ -149,7 +149,7 @@ Header Fields
    Contact                                                     m       [RFC3261]
    Content-Disposition                                                 [RFC3261]
    Content-Encoding                                            e       [RFC3261]
-   Content-ID                                                          [RFC-ietf-sipcore-content-id-10]
+   Content-ID                                                          [RFC8262]
    Content-Language                                                    [RFC3261]
    Content-Length                                              l       [RFC3261]
    Content-Type                                                c       [RFC3261]
@@ -289,6 +289,12 @@ Reason Protocols
                   representation in decimal digits of the received binary value.
    IKEV2          Cause for protocol failure of IKEV2 supporting untrusted WLAN, as a    [3GPP TS 29.274 subclause 8.103][6][_3GPP]
                   representation in decimal digits of the received binary value.
+                  cause value 1: User ends call cause value 2: RTP/RTCP time-out cause
+   RELEASE_CAUSE  value 3: Media bearer loss cause value 4: SIP timeout - no ACK cause   [3GPP TS 24.229 v14.4.0][Frederic_Firmin]
+                  value 5: SIP response time-out cause value 6: Call-setup time-out
+                  cause value 1: Media bearer or QoS lost cause value 2: Release of
+   FAILURE_CAUSE  signalling bearer cause value 3: Indication of failed resources        [3GPP TS 24.229 v14.4.0][Frederic_Firmin]
+                  allocation
 
 Option Tags
 
@@ -307,6 +313,7 @@ Option Tags
    tag itself is a string that is associated with a particular
    SIP option (that is, an extension).
    It identifies the option to SIP endpoints.
+
 
    Available Formats
            [IMG]
@@ -417,6 +424,7 @@ Warning Codes (warn-codes)
  Warning codes provide information supplemental to the status code
  in SIP response messages.
 
+
    Available Formats
            [IMG]
            CSV
@@ -477,11 +485,12 @@ Response Codes
  All response codes below are defined by [RFC3261] unless
  otherwise noted.
 
+
    Available Formats
            [IMG]
            CSV
 
-   Response Code           Description                          Reference
+   Response Code           Description                      Reference
    1xx           Provisional
    100           Trying
    180           Ringing
@@ -559,7 +568,7 @@ Response Codes
    603           Decline
    604           Does Not Exist Anywhere
    606           Not Acceptable
-   607           Unwanted                         [RFC-ietf-sipcore-status-unwanted-06]
+   607           Unwanted                         [RFC8197]
 
 SIP Privacy Header Field Values
 
@@ -661,7 +670,7 @@ Header Field Parameters and Parameter Values
 
    Registration Procedure(s)
 
- Published RFC (A standards-track RFC is NOT required)
+ RFC Required
 
    Reference
            [RFC3968]
@@ -1984,7 +1993,7 @@ Identity-Info Algorithm Parameter Values
 
    Registration Procedure(s)
 
- Deprecated and closed per [RFC-ietf-stir-rfc4474bis-16]
+ Deprecated and closed per RFC-ietf-stir-rfc4474bis-16
 
    Reference
            [RFC-ietf-stir-rfc4474bis-16]
@@ -2320,9 +2329,9 @@ SIP Feature-Capability Indicator Registration Tree
            [IMG]
            CSV
 
-    Name                                              Description                                                           Reference
-   sip.607 This feature-capability indicator, when included in a Feature-Caps header field of a REGISTER      [RFC-ietf-sipcore-status-unwanted-06]
-           response, indicates that the server supports, and will process, the 607 (Unwanted) response code.
+    Name                                                            Description                                                           Reference
+   sip.607 This feature-capability indicator, when included in a Feature-Caps header field of a REGISTER response, indicates that the     [RFC8197]
+           server supports, and will process, the 607 (Unwanted) response code.
 
 Priority Header Field Values
 
@@ -2441,7 +2450,7 @@ UUI Encoding Parameters
    [_3GPP]           3GPP Specifications Manager mailto:3gppContact&etsi.org       2017-06-02
    [Adam_Roach]      Adam Roach                  mailto:adam&nostrum.com           2013-02-26
    [Cullen_Jennings] Cullen Jennings             mailto:fluffy&cisco.com
-   [Frederic_Firmin] Frederic Firmin             mailto:frederic.firmin&etsi.org   2017-07-10
+   [Frederic_Firmin] Frederic Firmin             mailto:frederic.firmin&etsi.org   2017-09-26
    [Jon_Peterson]    Jon Peterson                mailto:jon.peterson&neustar.biz
    [Mary_Barnes]     Mary Barnes                 mailto:mary.ietf.barnes&gmail.com 2013-06-18
 
