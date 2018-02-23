@@ -4,7 +4,7 @@
            2005-08-23
 
    Last Updated
-           2017-08-14
+           2018-02-16
 
    Available Formats
            [IMG]
@@ -14,28 +14,28 @@
 
    Registries included below
 
-     * TLS ClientCertificateType Identifiers Registry
-     * TLS Cipher Suite Registry
-     * TLS ContentType Registry
-     * TLS Alert Registry
-     * TLS HandshakeType Registry
-     * TLS Supported Groups Registry
-     * TLS EC Point Format Registry
-     * TLS EC Curve Type Registry
-     * TLS Supplemental Data Formats (SupplementalDataType)
-     * TLS UserMappingType Values
-     * TLS SignatureAlgorithm Registry
-     * TLS HashAlgorithm Registry
-     * TLS Exporter Label Registry
-     * TLS Authorization Data Formats
-     * Heartbeat Message Types
-     * Heartbeat Modes
+     * TLS ClientCertificateType Identifiers Registry
+     * TLS Cipher Suite Registry
+     * TLS ContentType Registry
+     * TLS Alert Registry
+     * TLS HandshakeType Registry
+     * TLS Supported Groups Registry
+     * TLS EC Point Format Registry
+     * TLS EC Curve Type Registry
+     * TLS Supplemental Data Formats (SupplementalDataType)
+     * TLS UserMappingType Values
+     * TLS SignatureAlgorithm Registry
+     * TLS HashAlgorithm Registry
+     * TLS Exporter Label Registry
+     * TLS Authorization Data Formats
+     * Heartbeat Message Types
+     * Heartbeat Modes
 
 TLS ClientCertificateType Identifiers Registry
 
    Expert(s)
 
- Eric Rescorla
+ Yoav Nir, Rich Salz, Nick Sullivan
 
    Reference
            [RFC5246]
@@ -70,7 +70,7 @@ TLS Cipher Suite Registry
 
    Expert(s)
 
- Eric Rescorla
+ Yoav Nir, Rich Salz, Nick Sullivan
 
    Reference
            [RFC5246]
@@ -416,7 +416,11 @@ TLS Cipher Suite Registry
         0xC0,0xAD      TLS_ECDHE_ECDSA_WITH_AES_256_CCM                                Y       [RFC7251]
         0xC0,0xAE      TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8                              Y       [RFC7251]
         0xC0,0xAF      TLS_ECDHE_ECDSA_WITH_AES_256_CCM_8                              Y       [RFC7251]
-      0xC0,0xB0-FF     Unassigned
+        0xC0,0xB0      TLS_ECCPWD_WITH_AES_128_GCM_SHA256                              Y       [RFC-harkins-tls-dragonfly-02]
+        0xC0,0xB1      TLS_ECCPWD_WITH_AES_256_GCM_SHA384                              Y       [RFC-harkins-tls-dragonfly-02]
+        0xC0,0xB2      TLS_ECCPWD_WITH_AES_128_CCM_SHA256                              Y       [RFC-harkins-tls-dragonfly-02]
+        0xC0,0xB3      TLS_ECCPWD_WITH_AES_256_CCM_SHA384                              Y       [RFC-harkins-tls-dragonfly-02]
+      0xC0,0xB4-FF     Unassigned
         0xC1-CB,*      Unassigned
       0xCC,0x00-A7     Unassigned
         0xCC,0xA8      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256                     Y       [RFC7905]
@@ -559,7 +563,7 @@ TLS Supported Groups Registry
 
    Expert(s)
 
- Unassigned
+ Yoav Nir, Rich Salz, Nick Sullivan
 
    Reference
            [RFC-ietf-tls-rfc4492bis-17][RFC7919]
@@ -786,7 +790,7 @@ TLS Exporter Label Registry
 
    Expert(s)
 
- Eric Rescorla
+ Yoav Nir, Rich Salz, Nick Sullivan
 
    Reference
            [RFC5705]
@@ -818,6 +822,7 @@ TLS Exporter Label Registry
    EXPORTER: teap session key seed N       [RFC7170]
    EXPORTER-oneM2M-Bootstrap       Y       [oneM2M Security Solutions][Miguel_Angel_Reina_Ortega]
    EXPORTER-oneM2M-Connection      Y       [oneM2M Security Solutions][Miguel_Angel_Reina_Ortega]
+   EXPORTER-oneM2M-ESCertKE        Y       [oneM2M Security Solutions][Miguel_Angel_Reina_Ortega]
 
 TLS Authorization Data Formats
 
@@ -900,6 +905,6 @@ Heartbeat Modes
                                                                         People
 
                ID                        Name                          Contact URI               Last Updated
-   [Miguel_Angel_Reina_Ortega] Miguel Angel Reina Ortega mailto:MiguelAngel.ReinaOrtega&etsi.org 2015-05-12
+   [Miguel_Angel_Reina_Ortega] Miguel Angel Reina Ortega mailto:MiguelAngel.ReinaOrtega&etsi.org 2018-02-16
    [Pasi_Eronen]               Pasi Eronen               mailto:pasi.eronen&nokia.com            2008-04-04
    [Silke_Holtmanns]           Silke Holtmanns           mailto:Silke.Holtmanns&nokia.com        2013-01-30

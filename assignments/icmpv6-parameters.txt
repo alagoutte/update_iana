@@ -1,7 +1,7 @@
                                            Internet Control Message Protocol version 6 (ICMPv6) Parameters
 
    Last Updated
-           2017-07-04
+           2018-01-26
 
    Available Formats
            [IMG]
@@ -11,44 +11,46 @@
 
    Registries included below
 
-     * ICMPv6 "type" Numbers
-     * ICMPv6 "Code" Fields
+     * ICMPv6 "type" Numbers
+     * ICMPv6 "Code" Fields
 
-          * Type 0 - Reserved
-          * Type 1 - Destination Unreachable
-          * Type 2 - Packet Too Big
-          * Type 3 - Time Exceeded
-          * Type 4 - Parameter Problem
-          * Type 128 - Echo Request
-          * Type 129 - Echo Reply
-          * Type 130 - Multicast Listener Query
-          * Type 131 - Multicast Listener Report
-          * Type 132 - Multicast Listener Done
-          * Type 133 - Router Solicitation
-          * Type 134 - Router Advertisement
-          * Type 135 - Neighbor Solicitation
-          * Type 136 - Neighbor Advertisement
-          * Type 137 - Redirect Message
-          * Type 138 - Router Renumbering
-          * Type 139 - ICMP Node Information Query
-          * Type 140 - ICMP Node Information Response
-          * Type 141 - Inverse Neighbor Discovery
-          * Type 142 - Inverse Neighbor Discovery
-          * Type 144 - Home Agent Address Discovery
-          * Type 145 - Home Agent Address Discovery
-          * Type 146 - Mobile Prefix Solicitation
-          * Type 147 - Mobile Prefix Advertisement
+          * Type 0 - Reserved
+          * Type 1 - Destination Unreachable
+          * Type 2 - Packet Too Big
+          * Type 3 - Time Exceeded
+          * Type 4 - Parameter Problem
+          * Type 128 - Echo Request
+          * Type 129 - Echo Reply
+          * Type 130 - Multicast Listener Query
+          * Type 131 - Multicast Listener Report
+          * Type 132 - Multicast Listener Done
+          * Type 133 - Router Solicitation
+          * Type 134 - Router Advertisement
+          * Type 135 - Neighbor Solicitation
+          * Type 136 - Neighbor Advertisement
+          * Type 137 - Redirect Message
+          * Type 138 - Router Renumbering
+          * Type 139 - ICMP Node Information Query
+          * Type 140 - ICMP Node Information Response
+          * Type 141 - Inverse Neighbor Discovery
+          * Type 142 - Inverse Neighbor Discovery
+          * Type 144 - Home Agent Address Discovery
+          * Type 145 - Home Agent Address Discovery
+          * Type 146 - Mobile Prefix Solicitation
+          * Type 147 - Mobile Prefix Advertisement
+          * Type 160 - Extended Echo Request
+          * Type 161 - Extended Echo Reply
 
-     * FMIPv6 Message Types (Value 154)
-     * IPv6 Neighbor Discovery Option Formats
-     * Trust Anchor option (Type 15) Name Type field
-     * Certificate option (Type 16) Cert Type field
-     * Option-Code for Handover Assist Information Option (Type 29)
-     * Option-Code for Mobile Node Identifier Option (Type 30)
-     * Qtypes
-     * IPv6 ND Router Advertisement flags
-     * Address Registration Option Status Values
-     * 6LoWPAN capability Bits
+     * FMIPv6 Message Types (Value 154)
+     * IPv6 Neighbor Discovery Option Formats
+     * Trust Anchor option (Type 15) Name Type field
+     * Certificate option (Type 16) Cert Type field
+     * Option-Code for Handover Assist Information Option (Type 29)
+     * Option-Code for Mobile Node Identifier Option (Type 30)
+     * Qtypes
+     * IPv6 ND Router Advertisement flags
+     * Address Registration Option Status Values
+     * 6LoWPAN capability Bits
 
 ICMPv6 "type" Numbers
 
@@ -63,12 +65,13 @@ ICMPv6 "type" Numbers
         0-127 (Error messages)      IETF RFC Publication (Standards track, informational or experimental)
    128-255 (Informational messages) IETF RFC Publication (Standards track, informational or experimental)
 
-    Type                                     Name                                       Reference
+    Type                                     Name                                             Reference
       0    Reserved
       1    Destination Unreachable                                                   [RFC4443]
       2    Packet Too Big                                                            [RFC4443]
       3    Time Exceeded                                                             [RFC4443]
       4    Parameter Problem                                                         [RFC4443]
+    5-99   Unassigned
      100   Private experimentation                                                   [RFC4443]
      101   Private experimentation                                                   [RFC4443]
    102-126 Unassigned
@@ -105,16 +108,14 @@ ICMPv6 "type" Numbers
      157   Duplicate Address Request                                                 [RFC6775]
      158   Duplicate Address Confirmation                                            [RFC6775]
      159   MPL Control Message                                                       [RFC7731]
-   160-199 Unassigned
+     160   Extended Echo Request                                                     [RFC-ietf-intarea-probe-10]
+     161   Extended Echo Reply                                                       [RFC-ietf-intarea-probe-10]
+   162-199 Unassigned
      200   Private experimentation                                                   [RFC4443]
      201   Private experimentation                                                   [RFC4443]
      255   Reserved for expansion of ICMPv6 informational messages                   [RFC4443]
 
 ICMPv6 "Code" Fields
-
-   Registration Procedure(s)
-
- Standards Action or IESG Approval
 
    Reference
            [RFC4443]
@@ -125,6 +126,10 @@ ICMPv6 "Code" Fields
    No registrations at this time.
 
   Type 1 - Destination Unreachable
+
+   Registration Procedure(s)
+
+ Standards Action or IESG Approval
 
    Reference
            [RFC4443]
@@ -145,6 +150,10 @@ ICMPv6 "Code" Fields
 
   Type 2 - Packet Too Big
 
+   Registration Procedure(s)
+
+ Standards Action or IESG Approval
+
    Reference
            [RFC4443]
 
@@ -156,6 +165,10 @@ ICMPv6 "Code" Fields
     0
 
   Type 3 - Time Exceeded
+
+   Registration Procedure(s)
+
+ Standards Action or IESG Approval
 
    Reference
            [RFC4443]
@@ -169,6 +182,10 @@ ICMPv6 "Code" Fields
     1   fragment reassembly time exceeded
 
   Type 4 - Parameter Problem
+
+   Registration Procedure(s)
+
+ Standards Action or IESG Approval
 
    Reference
            [RFC4443]
@@ -185,6 +202,10 @@ ICMPv6 "Code" Fields
 
   Type 128 - Echo Request
 
+   Registration Procedure(s)
+
+ Standards Action or IESG Approval
+
    Reference
            [RFC4443]
 
@@ -196,6 +217,10 @@ ICMPv6 "Code" Fields
     0
 
   Type 129 - Echo Reply
+
+   Registration Procedure(s)
+
+ Standards Action or IESG Approval
 
    Reference
            [RFC4443]
@@ -209,6 +234,10 @@ ICMPv6 "Code" Fields
 
   Type 130 - Multicast Listener Query
 
+   Registration Procedure(s)
+
+ Not Defined
+
    Reference
            [RFC2710]
 
@@ -220,6 +249,10 @@ ICMPv6 "Code" Fields
     0
 
   Type 131 - Multicast Listener Report
+
+   Registration Procedure(s)
+
+ Not Defined
 
    Reference
            [RFC2710]
@@ -233,6 +266,10 @@ ICMPv6 "Code" Fields
 
   Type 132 - Multicast Listener Done
 
+   Registration Procedure(s)
+
+ Not Defined
+
    Reference
            [RFC2710]
 
@@ -244,6 +281,10 @@ ICMPv6 "Code" Fields
     0
 
   Type 133 - Router Solicitation
+
+   Registration Procedure(s)
+
+ Standards Action or IESG Approval
 
    Reference
            [RFC4861]
@@ -257,6 +298,10 @@ ICMPv6 "Code" Fields
 
   Type 134 - Router Advertisement
 
+   Registration Procedure(s)
+
+ Standards Action or IESG Approval
+
    Reference
            [RFC4861]
 
@@ -268,6 +313,10 @@ ICMPv6 "Code" Fields
     0
 
   Type 135 - Neighbor Solicitation
+
+   Registration Procedure(s)
+
+ Standards Action or IESG Approval
 
    Reference
            [RFC4861]
@@ -281,6 +330,10 @@ ICMPv6 "Code" Fields
 
   Type 136 - Neighbor Advertisement
 
+   Registration Procedure(s)
+
+ Standards Action or IESG Approval
+
    Reference
            [RFC4861]
 
@@ -293,6 +346,10 @@ ICMPv6 "Code" Fields
 
   Type 137 - Redirect Message
 
+   Registration Procedure(s)
+
+ Standards Action or IESG Approval
+
    Reference
            [RFC4861]
 
@@ -304,6 +361,10 @@ ICMPv6 "Code" Fields
     0
 
   Type 138 - Router Renumbering
+
+   Registration Procedure(s)
+
+ Not Defined
 
    Reference
            [Matt_Crawford]
@@ -319,6 +380,14 @@ ICMPv6 "Code" Fields
 
   Type 139 - ICMP Node Information Query
 
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Unassigned
+
    Reference
            [RFC4620]
 
@@ -332,6 +401,14 @@ ICMPv6 "Code" Fields
     2   The Data field contains an IPv4 address which is the Subject of this Query.                               [RFC4620]
 
   Type 140 - ICMP Node Information Response
+
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Unassigned
 
    Reference
            [RFC4620]
@@ -347,6 +424,10 @@ ICMPv6 "Code" Fields
 
   Type 141 - Inverse Neighbor Discovery
 
+   Registration Procedure(s)
+
+ Standards Action
+
    Reference
            [RFC3122]
 
@@ -358,6 +439,10 @@ ICMPv6 "Code" Fields
     0
 
   Type 142 - Inverse Neighbor Discovery
+
+   Registration Procedure(s)
+
+ Standards Action
 
    Reference
            [RFC3122]
@@ -371,6 +456,10 @@ ICMPv6 "Code" Fields
 
   Type 144 - Home Agent Address Discovery
 
+   Registration Procedure(s)
+
+ Not Defined
+
    Reference
            [RFC3775]
 
@@ -382,6 +471,10 @@ ICMPv6 "Code" Fields
     0
 
   Type 145 - Home Agent Address Discovery
+
+   Registration Procedure(s)
+
+ Not Defined
 
    Reference
            [RFC3775]
@@ -395,6 +488,10 @@ ICMPv6 "Code" Fields
 
   Type 146 - Mobile Prefix Solicitation
 
+   Registration Procedure(s)
+
+ Not Defined
+
    Reference
            [RFC3775]
 
@@ -407,11 +504,53 @@ ICMPv6 "Code" Fields
 
   Type 147 - Mobile Prefix Advertisement
 
+   Registration Procedure(s)
+
+ Not Defined
+
    Reference
            [RFC3775]
 
                 Code
    No registrations at this time.
+
+  Type 160 - Extended Echo Request
+
+   Registration Procedure(s)
+
+ First Come First Served
+
+   Reference
+           [RFC-ietf-intarea-probe-10]
+
+   Available Formats
+           [IMG]
+           CSV
+
+   Code     Name             Reference
+     0   No Error   [RFC-ietf-intarea-probe-10]
+   1-255 Unassigned
+
+  Type 161 - Extended Echo Reply
+
+   Registration Procedure(s)
+
+ First Come First Served
+
+   Reference
+           [RFC-ietf-intarea-probe-10]
+
+   Available Formats
+           [IMG]
+           CSV
+
+   Code                Name                         Reference
+     0   No Error                          [RFC-ietf-intarea-probe-10]
+     1   Malformed Query                   [RFC-ietf-intarea-probe-10]
+     2   No Such Interface                 [RFC-ietf-intarea-probe-10]
+     3   No Such Table Entry               [RFC-ietf-intarea-probe-10]
+     4   Multiple Interfaces Satisfy Query [RFC-ietf-intarea-probe-10]
+   5-255 Unassigned
 
 FMIPv6 Message Types (Value 154)
 
@@ -609,8 +748,8 @@ IPv6 ND Router Advertisement flags
            CSV
 
    RA Option Bit              Description               Reference
-         0       M - Managed Address Configuration Flag [RFC2461]
-         1       O - Other Configuration Flag           [RFC2461]
+         0       M - Managed Address Configuration Flag [RFC4861]
+         1       O - Other Configuration Flag           [RFC4861]
          2       H - Mobile IPv6 Home Agent Flag        [RFC3775]
          3       Prf - Router Selection Preferences     [RFC4191]
          4       Prf - Router Selection Preferences     [RFC4191]
