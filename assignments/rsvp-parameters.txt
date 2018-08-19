@@ -1,7 +1,7 @@
                                                    Resource Reservation Protocol (RSVP) Parameters
 
    Last Updated
-           2018-02-20
+           2018-08-02
 
    Note
 
@@ -40,11 +40,11 @@
           * Class Types or C-Types ‒ 19 LABEL_REQUEST
           * Class Types or C-Types ‒ 20 EXPLICIT_ROUTE
 
-               * Sub-object type ‒ 20 EXPLICIT_ROUTE ‒ Type 1 Explicit Route
+               * Subobject type ‒ 20 EXPLICIT_ROUTE ‒ Type 1 Explicit Route
 
           * Class Types or C-Types ‒ 21 ROUTE_RECORD
 
-               * Sub-object type ‒ 21 ROUTE_RECORD ‒ Type 1 Route Record
+               * Subobject type ‒ 21 ROUTE_RECORD ‒ Type 1 Route Record
 
           * Class Types or C-Types ‒ 22 HELLO
           * Class Types or C-Types ‒ 23 MESSAGE_ID
@@ -58,6 +58,9 @@
           * Class Types or C-Types ‒ 35 UPSTREAM_LABEL
           * Class Types or C-Types ‒ 36 LABEL_SET
           * Class Types or C-Types ‒ 37 PROTECTION
+
+               * Subobject types - 37 PROTECTION - C-Type 3
+
           * Class Types or C-Types ‒ 38 PRIMARY_PATH_ROUTE
           * Class Types or C-Types ‒ 42 DSBM IP ADDRESS
           * Class Types or C-Types ‒ 43 SBM_PRIORITY
@@ -79,7 +82,7 @@
           * Class Types or C-Types ‒ 132 SESSION-OF-INTEREST
           * Class Types or C-Types ‒ 133 LINK_CAPABILITY
 
-               * Sub-object type ‒ 133 LINK_CAPABILITY ‒ TE Link Capabilities
+               * Subobject type ‒ 133 LINK_CAPABILITY ‒ TE Link Capabilities
 
           * Class Types or C-Types ‒ 134 Capability Object
           * Class Types or C-Types ‒ 161 RSVP_HOP_L2
@@ -96,11 +99,11 @@
           * Class Types or C-Types ‒ 199 ASSOCIATION
           * Class Types or C-Types ‒ 200 SECONDARY_EXPLICIT_ROUTE
 
-               * Sub-object types ‒ 200 SECONDARY_EXPLICIT_ROUTE ‒ C-Type 1
+               * Subobject types ‒ 200 SECONDARY_EXPLICIT_ROUTE ‒ C-Type 1
 
           * Class Types or C-Types ‒ 201 SECONDARY_RECORD_ROUTE
 
-               * Sub-object types ‒ 201 SECONDARY_RECORD_ROUTE ‒ C-Type 1
+               * Subobject types ‒ 201 SECONDARY_RECORD_ROUTE ‒ C-Type 1
 
           * Class Types or C-Types ‒ 202 CALL ATTRIBUTES
           * Class Types or C-Types ‒ 203 REVERSE_LSP
@@ -112,22 +115,22 @@
           * Class Types or C-Types ‒ 228 CALL_OPS (ASON)
           * Class Types or C-Types ‒ 229 GENERALIZED_UNI
 
-               * Sub-object types
+               * Subobject types
 
-                    * Sub-object sub-types ‒ 1 Source TNA
-                    * Sub-object sub-types ‒ 2 Destination TNA
-                    * Sub-object sub-types ‒ 3 Diversity
-                    * Sub-object sub-types ‒ 4 Egress Label
-                    * Sub-object sub-types ‒ 5 Service level
+                    * Subobject subtypes ‒ 1 Source TNA
+                    * Subobject subtypes ‒ 2 Destination TNA
+                    * Subobject subtypes ‒ 3 Diversity
+                    * Subobject subtypes ‒ 4 Egress Label
+                    * Subobject subtypes ‒ 5 Service level
 
           * Class Types or C-Types ‒ 230 CALL_ID
 
-               * Sub-object types ‒ 2 Globally unique
+               * Subobject types ‒ 2 Globally unique
 
           * Class Types or C-Types ‒ 231 3GPP2_Object
           * Class Types or C-Types ‒ 232 EXCLUDE_ROUTE
 
-               * Sub-object types
+               * Subobject types
 
           * Class Types or C-Types ‒ 248 PCN
 
@@ -702,7 +705,7 @@ Class Names, Class Numbers, and Class Types
    Value      Description      Reference
      1   Type 1 Explicit Route [RFC3209]
 
-    Sub-object type ‒ 20 EXPLICIT_ROUTE ‒ Type 1 Explicit Route
+    Subobject type ‒ 20 EXPLICIT_ROUTE ‒ Type 1 Explicit Route
 
    Reference
            [RFC3209][RFC7571]
@@ -724,9 +727,11 @@ Class Names, Class Numbers, and Class Types
     33   Explicit Exclusion Route subobject (EXRS)                                                       [RFC4874]
     34   Unassigned
     35   Hop Attributes                                                                                  [RFC7570]
-    36   SR-ERO (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14) [draft-ietf-pce-segment-routing]
+    36   SR-ERO (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14) [draft-ietf-pce-segment-routing]
     37   Reserved                                                                                        [RFC4873]
-   38-63 Unassigned
+    38   IPv4 Diversity                                                                                  [RFC8390]
+    39   IPv6 Diversity                                                                                  [RFC8390]
+   40-63 Unassigned
     64   Path Key with 32-bit PCE ID                                                                     [RFC5520][RFC5553]
     65   Path Key with 128-bit PCE ID                                                                    [RFC5520][RFC5553]
 
@@ -742,7 +747,7 @@ Class Names, Class Numbers, and Class Types
    Value     Description     Reference
      1   Type 1 Route Record [RFC3209]
 
-    Sub-object type ‒ 21 ROUTE_RECORD ‒ Type 1 Route Record
+    Subobject type ‒ 21 ROUTE_RECORD ‒ Type 1 Route Record
 
    Reference
            [RFC3209]
@@ -760,7 +765,7 @@ Class Names, Class Numbers, and Class Types
    6-33  Unassigned
     34   SRLG sub-object                                                                                 [RFC8001]
     35   Hop Attributes                                                                                  [RFC7570]
-    36   SR-RRO (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14) [draft-ietf-pce-segment-routing]
+    36   SR-RRO (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14) [draft-ietf-pce-segment-routing]
     37   Reserved                                                                                        [RFC4873]
     38   BYPASS_ASSIGNMENT IPv4 subobject                                                                [RFC8271]
     39   BYPASS_ASSIGNMENT IPv6 subobject                                                                [RFC8271]
@@ -918,9 +923,32 @@ Class Names, Class Numbers, and Class Types
            [IMG]
            CSV
 
-   Value    Description    Reference
+   Value    Description          Reference
      1   Type 1 Protection [RFC3473]
      2   Type 2            [RFC4872]
+     3   Egress Protection [RFC8400, Section 4.1]
+
+    Subobject types - 37 PROTECTION - C-Type 3
+
+   Registration Procedure(s)
+
+ IETF Review
+
+   Reference
+           [RFC8400]
+
+   Available Formats
+           [IMG]
+           CSV
+
+    Value      Description            Reference
+      0    Reserved            [RFC8400]
+      1    IPv4_PRIMARY_EGRESS [RFC8400, Section 4.1.1]
+      2    IPv6_PRIMARY_EGRESS [RFC8400, Section 4.1.1]
+      3    IPv4_P2P_LSP_ID     [RFC8400, Section 4.1.2]
+      4    IPv6_P2P_LSP_ID     [RFC8400, Section 4.1.2]
+    5-127  Unassigned
+   128-255 Reserved            [RFC8400]
 
   Class Types or C-Types ‒ 38 PRIMARY_PATH_ROUTE
 
@@ -1062,7 +1090,7 @@ Class Names, Class Numbers, and Class Types
 
    Note
 
- Sub-object bits are defined in RSVP TE Parameters.
+ Subobject bits are defined in RSVP TE Parameters.
 
    Available Formats
            [IMG]
@@ -1180,7 +1208,7 @@ Class Names, Class Numbers, and Class Types
    Value      Description       Reference
      1   (TE Link Capabilities)
 
-    Sub-object type ‒ 133 LINK_CAPABILITY ‒ TE Link Capabilities
+    Subobject type ‒ 133 LINK_CAPABILITY ‒ TE Link Capabilities
 
    Reference
            [RFC3209]
@@ -1339,7 +1367,7 @@ Class Names, Class Numbers, and Class Types
 
    Note
 
- Sub-object bits are defined in RSVP TE Parameters.
+ Subobject bits are defined in RSVP TE Parameters.
 
    Available Formats
            [IMG]
@@ -1395,14 +1423,14 @@ Class Names, Class Numbers, and Class Types
    Value          Description          Reference
      2   P2MP SECONDARY_EXPLICIT_ROUTE [RFC4875]
 
-    Sub-object types ‒ 200 SECONDARY_EXPLICIT_ROUTE ‒ C-Type 1
+    Subobject types ‒ 200 SECONDARY_EXPLICIT_ROUTE ‒ C-Type 1
 
    Reference
            [RFC4873]
 
    Note
 
- For C-Type 1, the following additional Sub-object
+ For C-Type 1, the following additional Subobject
  type is defined:
 
    Available Formats
@@ -1429,7 +1457,7 @@ Class Names, Class Numbers, and Class Types
    Value         Description         Reference
      2   P2MP SECONDARY_RECORD_ROUTE [RFC4875]
 
-    Sub-object types ‒ 201 SECONDARY_RECORD_ROUTE ‒ C-Type 1
+    Subobject types ‒ 201 SECONDARY_RECORD_ROUTE ‒ C-Type 1
 
    Reference
            [RFC4873]
@@ -1437,7 +1465,7 @@ Class Names, Class Numbers, and Class Types
    Note
 
  For C-Type 1, the following additional
- Sub-object type is defined:
+ Subobject type is defined:
 
    Available Formats
            [IMG]
@@ -1573,7 +1601,7 @@ Class Names, Class Numbers, and Class Types
    Value      Description       Reference
      1   Type 1 Generalized UNI [RFC3476]
 
-    Sub-object types
+    Subobject types
 
    Reference
            [RFC3476]
@@ -1589,7 +1617,7 @@ Class Names, Class Numbers, and Class Types
      4   Egress Label    [RFC3476]
      5   Service level   [RFC3476]
 
-      Sub-object sub-types ‒ 1 Source TNA
+      Subobject subtypes ‒ 1 Source TNA
 
    Reference
            [RFC3476]
@@ -1603,7 +1631,7 @@ Class Names, Class Numbers, and Class Types
      2   Ipv6        [RFC3476]
      3   NSAP        [RFC3476]
 
-      Sub-object sub-types ‒ 2 Destination TNA
+      Subobject subtypes ‒ 2 Destination TNA
 
    Available Formats
            [IMG]
@@ -1614,7 +1642,7 @@ Class Names, Class Numbers, and Class Types
      2   Ipv6        [RFC3476]
      3   NSAP        [RFC3476]
 
-      Sub-object sub-types ‒ 3 Diversity
+      Subobject subtypes ‒ 3 Diversity
 
    Reference
            [RFC3476]
@@ -1626,7 +1654,7 @@ Class Names, Class Numbers, and Class Types
    Value Description Reference
      1   Diversity   [RFC3476]
 
-      Sub-object sub-types ‒ 4 Egress Label
+      Subobject subtypes ‒ 4 Egress Label
 
    Reference
            [RFC3476]
@@ -1639,7 +1667,7 @@ Class Names, Class Numbers, and Class Types
      1   Egress Label [RFC3476]
      2   SPC_LABEL    [RFC3474]
 
-      Sub-object sub-types ‒ 5 Service level
+      Subobject subtypes ‒ 5 Service level
 
    Reference
            [RFC3476]
@@ -1664,7 +1692,7 @@ Class Names, Class Numbers, and Class Types
      1   Operator specific [RFC3474]
      2   Globally unique   [RFC3474]
 
-    Sub-object types ‒ 2 Globally unique
+    Subobject types ‒ 2 Globally unique
 
    Reference
            [RFC3474]
@@ -1704,7 +1732,7 @@ Class Names, Class Numbers, and Class Types
    Value  Description  Reference
      1   EXCLUDE_ROUTE
 
-    Sub-object types
+    Subobject types
 
    Available Formats
            [IMG]
@@ -1723,6 +1751,9 @@ Class Names, Class Numbers, and Class Types
     33   Explicit Exclusion Route subobject (EXRS) [RFC4874]
     34   SRLG                                      [RFC4874]
     35   Switching Capability (SC)                 [RFC6001]
+   36-37 Unassigned
+    38   IPv4 Diversity                            [RFC8390]
+    39   IPv6 Diversity                            [RFC8390]
 
   Class Types or C-Types ‒ 248 PCN
 
@@ -1995,7 +2026,8 @@ Error Codes and Globally-Defined Error Value Sub-Codes
     33   Unknown Path Key for PKS expansion                                      [RFC5553]
     34   ERO too large for MTU                                                   [RFC5553]
     35   Unknown Endpoint                                                        [RFC6005]
-   36-63 Unassigned
+    36   Unsupported Diversity Identifier Type                                   [RFC8390]
+   37-63 Unassigned
     64   Unsupported Exclude Route Subobject Type                                [RFC4874]
     65   Inconsistent Subobject                                                  [RFC4874]
     66   Local Node in Exclude Route                                             [RFC4874]
@@ -2027,20 +2059,23 @@ Error Codes and Globally-Defined Error Value Sub-Codes
            [IMG]
            CSV
 
-   Value           Description           Reference
-     1   RRO too large for MTU           [RFC3209]
-     2   RRO Notification                [RFC3209]
-     3   Tunnel locally repaired         [RFC3209]
-     4   Control Channel Active State    [RFC3473]
-     5   Control Channel Degraded State  [RFC3473]
-     6   Preferable path exists          [RFC4736]
-     7   Local link maintenance required [RFC4736]
-     8   Local node maintenance required [RFC4736]
-     9   LSP Failure                     [RFC4872]
-    10   LSP Recovered                   [RFC4872]
-    11   LSP Locally Failed              [RFC4872]
-    12   No OOB mapping received         [RFC6511]
-    13   Preferable P2MP-TE Tree Exists  [RFC8149]
+   Value             Description             Reference
+     1   RRO too large for MTU               [RFC3209]
+     2   RRO Notification                    [RFC3209]
+     3   Tunnel locally repaired             [RFC3209]
+     4   Control Channel Active State        [RFC3473]
+     5   Control Channel Degraded State      [RFC3473]
+     6   Preferable path exists              [RFC4736]
+     7   Local link maintenance required     [RFC4736]
+     8   Local node maintenance required     [RFC4736]
+     9   LSP Failure                         [RFC4872]
+    10   LSP Recovered                       [RFC4872]
+    11   LSP Locally Failed                  [RFC4872]
+    12   No OOB mapping received             [RFC6511]
+    13   Preferable P2MP-TE Tree Exists      [RFC8149]
+    14   Route of XRO LSP identifier unknown [RFC8390]
+    15   Failed to satisfy Exclude Route     [RFC8390]
+    16   Compliant path exists               [RFC8390]
 
   Sub-Codes ‒ 27 Diffserv Error
 
@@ -2362,12 +2397,12 @@ Capability Object values
            [IMG]
            CSV
 
-   Bit Number Hex Value               Name                                    Reference
+   Bit Number Hex Value               Name                     Reference
        31      0x0001   RecoveryPath Srefresh Capable (S) [RFC5063]
        30      0x0002   RecoveryPath Desired (R)          [RFC5063]
        29      0x0004   RecoveryPath Transmit Enabled (T) [RFC5063]
-       28      0x0008   RI-RSVP Capable (I)               [RFC-ietf-teas-rsvp-te-scaling-rec-09, Section 3]
-       27      0x0010   Per-Peer Flow-Control Capable (F) [RFC-ietf-teas-rsvp-te-scaling-rec-09, Section 4]
+       28      0x0008   RI-RSVP Capable (I)               [RFC8370, Section 3]
+       27      0x0010   Per-Peer Flow-Control Capable (F) [RFC8370, Section 4]
       26-0              Unassigned
 
 Call Attributes TLV
